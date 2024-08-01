@@ -1,0 +1,37 @@
+### 引入
+
+设
+
+ $$ \large f(a,b,c,n)=\sum\limits_{i=0}^{n}{\left\lfloor\frac{ai+b}{c}\right\rfloor}$$
+
+这里 $a,b,c,n$ 是常数，需要一个时间复杂度很小的算法。
+
+这里如果有 $a \ge c$ 或者  $b \ge c$ ,那么可以转化成取模简化问题。
+
+对式子进行简单的化简
+
+$$\large\begin{aligned}
+    f(a,b,c,n) & = \sum\limits_{i=0}^{n}\left\lfloor\frac{ai+b}{c}\right\rfloor
+    \\
+    & =\sum\limits_{i=0}^{n}{\left\lfloor \frac{(\lfloor\frac{a}{c}\rfloor c + a\mod c)i+(\lfloor\frac{b}{c}\rfloor c + b \mod c)}{c}\right\rfloor}
+    \\
+    & =n\left\lfloor\frac{b}{c}\right\rfloor +\frac{(n+1)n}{2}\left\lfloor\frac{a}{c}\right\rfloor  +\sum\limits_{i=0}^{n}{\left\lfloor\frac{(a \mod c)i + (b \mod c )}{c}\right\rfloor}
+    \\
+    & = n\left\lfloor\frac{b}{c}\right\rfloor +\frac{(n+1)n}{2}\left\lfloor\frac{a}{c}\right\rfloor  +f(a \mod c,b \mod c, c, n)
+\end{aligned}
+$$
+
+
+
+抽象地，要加快和式的计算过程，所有方法均可归约为贡献合并计算， 当发现贡献难以合并时，我们可以将条件做转化得到另一个形式的和式。以刚刚的式子为例子
+$$\large\sum\limits_{i=0}^{n}{\left\lfloor\frac{ai+b}{c}\right\rfloor}=\sum\limits_{i=0}^{n}{\sum\limits_{j=0}^{\lfloor\frac{ai+b}{c}-1\rfloor}1}$$
+
+现在多了一个变量 $j$ ，我们考虑合并这个变量的贡献。
+
+我们尝试交换一下内外界，要想保持和式不变，就必须要有约束，交换内外界之后，里面的贡献就可以变换为
+
+$$\large \left[ j< \left\lfloor\frac{ai+b}{c}\right\rfloor \right]$$
+
+我们对这个式子做一下缩放的处理
+
+$$\large j<\left\lfloor\frac{ai+b}{c}\right\rfloor\Longleftrightarrow j+1\le \left\lfloor\frac{ai+b}{c}\right\rfloor\Longleftrightarrow j+1\le \left\lfloor\frac{}{}\right\rfloor$$
