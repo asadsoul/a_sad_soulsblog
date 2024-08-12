@@ -25,6 +25,7 @@ $$
 $$
 \Large x= \sum\limits_{i=1}^{k}{a_i\cdot \frac{\prod\limits_{j=1,j\ne i}^{k}{n_i}}{(\prod\limits_{j=1,j\ne i}^{k}{n_i})_{(\mod n_i)}}}
 $$
+
 ps：这里$(\mod n_i)$ 指在模 $n_i$ 意义下的逆元。
 
 具体的就是：
