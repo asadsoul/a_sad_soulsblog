@@ -1,3 +1,3 @@
 # a_sad_soulsblog
 
-### 猫猫猫猫我喜欢你！
+你知道吗，@White_Wat 是LTYZ最强的佬
