@@ -7,7 +7,7 @@
 中国剩余定理 （Chinese Remainder Theorem ，CRT） 可求解如下一元线性同余方程组（其中 $n_1,n_2,\dots,n_k$ 两两互质）
 
 $$
-\large\left\{ \begin{matrix}
+\large\left \{ \begin{matrix}
 x &\equiv a_1 (\mod n_1)
 \\ 
 x &\equiv a_2 (\mod n_2)
@@ -48,16 +48,17 @@ ps：这里$(\mod n_i)$ 指在模 $n_i$ 意义下的逆元。
 
 当模数不互质时，普通的剩余定理已经不适用了。这时候就要清楚毫不相关的拓展中国剩余定理了。
 
-我们设两个方程是$x\equiv a_1 (\mod m_1)$ 和 $x\equiv a_2(\mod m_2)$
+我们设两个方程是 $x\equiv a_1 (\mod m_1)$ 和 $x\equiv a_2(\mod m_2)$
 
 将其转化为不定方程 :
-$x=m_1\cdot p + a_1=m_2\cdot q + a_2$，其中 $p,q\in \Z$，则有$m_1\cdot p - m_2\cdot q = a_2-a_1$
+$x=m_1\cdot p + a_1=m_2\cdot q + a_2$，其中 $p,q\in \Z$，则有 $m_1\cdot p - m_2\cdot q = a_2-a_1$
 
 由裴蜀定理可得，当 $\gcd(m_1,m_2) \nmid a_2-a_1$ 时无解。
 
-其它情况下通过扩展欧几里得算法求出可行解$p,q$
+其它情况下通过扩展欧几里得算法求出可行解 $p,q$
 
 则原来的方程解可以合并为 ：
+
 $$x \equiv b (\mod M)$$
 
 这里 $b=m_1\cdot p + a_1,M=lcm(m_1,m_2)$
