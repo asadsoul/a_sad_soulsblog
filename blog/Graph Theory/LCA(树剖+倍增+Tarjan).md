@@ -1,6 +1,6 @@
 ## 关于LCA
 
-在一棵*有根树* $G(E,V)，RT = root$ 中，设 $x,y\in V$ ， 我们称 $x,y$ 到根 $RT$ 的路径上第一个相交的点称作 $x,y$ 在该有根树上的最近公共祖先(LCA,Lowest Common Ancestor)，记作 $LCA(x,y)$ 。
+在一棵*有根树* $G(E,V)，RT = root$ 中，设$x,y\in V$， 我们称 $x,y$ 到根 $RT$ 的路径上第一个相交的点称作 $x,y$ 在该有根树上的最近公共祖先(LCA,Lowest Common Ancestor)，记作 $LCA(x,y)$ 。
 
 对于 $LCA(x,y)$ ，该点一定是 $x\rightarrow y$ 上的点。 $LCA$ 有这样的性质:
 - 设 $dep(x)$为该点的深度，则 $dis(x,y)= dep(x)+dep(y)-2dep(LCA(x,y))$ 原因易证(树上路径唯一)。
