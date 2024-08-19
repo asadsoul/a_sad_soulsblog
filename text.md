@@ -1,4 +1,3 @@
-$$\large f[i][j]+=\min_{k=1,k\ne j}^{log{n}}{f[v][k]}$$
+$f[u][i]-> 2^i$
 
-$$\large \min_{k=1}^{log{n}}{f[1][k]}$$
-
+$f[u][i]=f[f[[u][i-1]]][i-1]$
